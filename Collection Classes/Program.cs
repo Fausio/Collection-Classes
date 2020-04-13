@@ -14,12 +14,39 @@ namespace Collection_Classes
          */
         static void Main(string[] args)
         {
-            Stack stack = new Stack(3);
-            stack.Push(23);
-            stack.Push(45);
-            stack.Push(78);
+            #region Stack
 
-            Console.WriteLine(Convert.ToString(stack.Pop()));
+            //Stack stack = new Stack(3);
+            //stack.Push(23);
+            //stack.Push(45);
+            //stack.Push(78);
+
+            //int sum = 0;
+            ////while (stack.Count != 0)
+            ////{
+            ////    Console.WriteLine(stack.Pop().ToString());
+            ////}
+            //while (stack.Count != 0)
+            //{
+            //    sum = sum + int.Parse(stack.Pop().ToString());
+            //}
+            //Console.WriteLine("Sum is " + sum.ToString());
+            #endregion
+            #region Queue
+            Queue queue = new Queue();
+            queue.Enqueue("Fáusio ");
+            queue.Enqueue("Luis");
+            queue.Enqueue("Matsinhe");
+
+            var FullName = "";
+            while (queue.Count != 0)
+            {
+                FullName = FullName+" "+queue.Dequeue() ;
+            }
+            Console.WriteLine("Full name name is: {0}", FullName);
+            #endregion
+
+
 
             Console.ReadKey();
         }
